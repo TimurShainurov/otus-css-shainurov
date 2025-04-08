@@ -1,2 +1,2 @@
 # otus-css-shainurov
-# Hello!
+Hello!
