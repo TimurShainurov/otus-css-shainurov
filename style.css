@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto Regular"),
+        url("/fonts/Roboto/static/Roboto-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto Medium"),
+        url("/fonts/Roboto/static/Roboto-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local("Roboto Bold"),
+        url("/fonts/Roboto/static/Roboto-Bold.ttf");
+    font-weight: 700;
+}
+
+* {
+    line-height: 100%;
+
+}
+
+body {
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 700;
+    width: 100%;
+}
+
+header>span {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 86px;
+    line-height: 120%;
+}
+
+nav {
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-family: "Playfair Display";
+    font-weight: 500;
+    font-size: 86px;
+    line-height: 120%;
+}
+
+article>span {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: "Playfair Display";
+    font-weight: 500;
+    font-size: 86px;
+}
+
+.professions {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+blockquote {
+    font-family: "Bitter";
+    font-size: 26px;
+    font-weight: 400;
+}
+
+figcaption {
+    font-size: 16px;
+}
+
+.uppercase {
+    text-transform:uppercase ;
+}
+.description {
+    font-weight: 400;
+}
+
+.website {
+    font-size: 16px;
+}
+
+.website a {
+    font-weight: 400;
+}
+
+.strengths li {
+    font-family: "Bitter";
+    font-size: 34px;
+    font-weight: 400;
+}
+
+footer{
+    background-color: #0D0D0D;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+address {
+    font-style: normal;
+    text-decoration: underline;
+    line-height: 26px;
+}
+
+.product {
+    font-weight: 500;
+    font-size: 18px;
+}
+.bold {
+    font-weight: 900;
+    font-size: 24px;
+}
