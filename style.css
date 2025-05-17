@@ -31,17 +31,18 @@ body {
     width: 100%;
 }
 
-header>span {
+.header-title {
     font-family: "Playfair Display", serif;
     font-weight: 600;
     font-size: 86px;
     line-height: 120%;
 }
 
-nav {
+.navigation {
     font-weight: 500;
 }
 
+/* ul и а для сброса стилей */
 ul {
     list-style: none;
 }
@@ -51,24 +52,24 @@ a {
     color: inherit;
 }
 
-h1 {
+.main-title {
     font-family: "Playfair Display";
     font-weight: 500;
     font-size: 86px;
     line-height: 120%;
 }
 
-article>span {
+.title {
     font-weight: 500;
     font-size: 20px;
 }
 
-h2 {
+.subtitle {
     font-weight: 700;
     font-size: 24px;
 }
 
-h3 {
+.main-text {
     font-family: "Playfair Display";
     font-weight: 500;
     font-size: 86px;
@@ -79,19 +80,20 @@ h3 {
     font-size: 18px;
 }
 
-blockquote {
+.quote {
     font-family: "Bitter";
     font-size: 26px;
     font-weight: 400;
 }
 
-figcaption {
+.figcaption {
     font-size: 16px;
 }
 
 .uppercase {
-    text-transform:uppercase ;
+    text-transform: uppercase;
 }
+
 .description {
     font-weight: 400;
 }
@@ -100,24 +102,24 @@ figcaption {
     font-size: 16px;
 }
 
-.website a {
+.website-link {
     font-weight: 400;
 }
 
-.strengths li {
+.strengths-list {
     font-family: "Bitter";
     font-size: 34px;
     font-weight: 400;
 }
 
-footer{
+.footer {
     background-color: #0D0D0D;
     color: #FFFFFF;
     font-weight: 400;
     font-size: 16px;
 }
 
-address {
+.contact-info {
     font-style: normal;
     text-decoration: underline;
     line-height: 26px;
@@ -127,6 +129,7 @@ address {
     font-weight: 500;
     font-size: 18px;
 }
+
 .bold {
     font-weight: 900;
     font-size: 24px;
