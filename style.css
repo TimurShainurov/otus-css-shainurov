@@ -29,6 +29,14 @@ body {
     font-size: 24px;
     font-weight: 700;
     width: 100%;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px 16px 23px;
 }
 
 .header-title {
@@ -42,6 +50,11 @@ body {
     font-weight: 500;
 }
 
+.nav-menu {
+    display: flex;
+    gap: 55px;
+}
+
 /* ul и а для сброса стилей */
 ul {
     list-style: none;
@@ -52,11 +65,32 @@ a {
     color: inherit;
 }
 
+.hero-block {
+    background: url(/img/bkg-modstudio.jpg) no-repeat center/cover;
+    min-height: 630px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-block {
+    min-height: 360px;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 690px;
+}
+
 .main-title {
     font-family: "Playfair Display";
     font-weight: 500;
     font-size: 86px;
     line-height: 120%;
+    margin: 0;
+    margin-bottom: 14px;
 }
 
 .title {
