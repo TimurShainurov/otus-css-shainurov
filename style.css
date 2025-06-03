@@ -21,15 +21,14 @@
 
 * {
     line-height: 100%;
-
 }
 
 body {
     font-family: "Roboto";
     font-size: 24px;
     font-weight: 700;
-    width: 100%;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 .header {
@@ -98,28 +97,76 @@ a {
     font-size: 20px;
 }
 
+
+
+.biography {
+    max-width: 1165px;
+    margin: 0 auto;
+    display: flex;
+    padding: 151px 0 150px 0;
+}
+
+.main-image {
+    width: 49%;
+    object-fit: cover;
+}
+
+.subtitle-container {
+    flex-grow: 1;
+}
+
 .subtitle {
     font-weight: 700;
     font-size: 24px;
+    margin: 0;
+    margin-left: 29px;
+}
+
+.rotated {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+.right-container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 39%;
+    gap: 36px;
 }
 
 .main-text {
     font-family: "Playfair Display";
     font-weight: 500;
     font-size: 86px;
+    margin: 0;
+    line-height: normal;
 }
 
 .professions {
     font-weight: 500;
     font-size: 18px;
+    margin: 0;
+}
+
+.hyphen {
+    margin-bottom: 18px;
 }
 
 .quote {
     font-family: "Bitter";
     font-size: 26px;
     font-weight: 400;
+    margin: 0;
 }
 
+.quote-text {
+    line-height: normal;
+}
+
+p {
+    margin: 0;
+}
 .figcaption {
     font-size: 16px;
 }
