@@ -166,8 +166,44 @@ p {
     margin: 0;
 }
 
+.designers {
+    padding-left: 20px;
+}
+
+.designers-subtitle {
+    margin: 0 0 30px 119px;
+    line-height: normal;
+}
+
+.designers-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.image-wrap {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+.end-alignment {
+    align-items: flex-end;
+}
+
 .figcaption {
     font-size: 16px;
+}
+
+.left-alignment {
+    min-width: 332px;
+}
+
+
+.figcaption p {
+    line-height: normal;
 }
 
 .uppercase {
@@ -238,10 +274,6 @@ p {
 .center {
     font-size: 32px;
     text-align: center;
-}
-
-.quote-text {
-    line-height: normal;
 }
 
 .strengths-list {
