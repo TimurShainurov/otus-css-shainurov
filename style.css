@@ -47,11 +47,13 @@ body {
 
 .navigation {
     font-weight: 500;
+    overflow-x: auto;
 }
 
 .nav-menu {
     display: flex;
     gap: 55px;
+    align-items: center;
 }
 
 /* ul и а для сброса стилей */
@@ -201,7 +203,6 @@ p {
     min-width: 332px;
 }
 
-
 .figcaption p {
     line-height: normal;
 }
@@ -252,6 +253,7 @@ p {
 
 .testimonials-image {
     width: 100%;
+    max-width: 451px;
 }
 
 .subtitle-container {
@@ -276,10 +278,85 @@ p {
     text-align: center;
 }
 
+.strong-points {
+    padding: 0 0 150px 20px;
+}
+
+.strong-points-subtitile {
+    margin: 0 0 30px 238px;
+}
+
+/* Фолбэк на флексе */
+
+/* .strengths-container {
+    display: flex;
+    overflow-x: auto;
+}
+
+.strengths-images {
+    display: flex;
+    align-items: flex-start;
+} 
+
+.strong-points-left {
+    margin-right: 21px;
+}*/
+
+@supports (display: grid) {
+    .strengths-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        overflow-x: auto;
+    }
+
+    .strengths-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 21px;
+    }
+}
+
+.strengths {
+    margin: 0 20px 0 21px;
+}
+
+.strengths-subtitle {
+    padding: 0 37px;
+    margin-bottom: 28px;
+    line-height: 100%;
+}
+
+/* Фолбэк на флексе */
+
+/* .list-container {
+    display: flex;
+    justify-content: center;
+} */
+
+@supports(display: grid) {
+    .list-container {
+        display: grid;
+        justify-content: center;
+    }
+}
+
 .strengths-list {
     font-family: "Bitter";
     font-size: 34px;
     font-weight: 400;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.strengths-list li {
+    line-height: normal;
+}
+
+.strengths-coffee-shop {
+    max-width: 335px;
+    object-fit: cover;
+    aspect-ratio: 335 / 554;
 }
 
 .footer {
@@ -287,20 +364,32 @@ p {
     color: #FFFFFF;
     font-weight: 400;
     font-size: 16px;
+    padding: 58px 24px 58px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .contact-info {
     font-style: normal;
     text-decoration: underline;
     line-height: 26px;
+    width: 100%;
 }
 
 .product {
     font-weight: 500;
     font-size: 18px;
+    width: 100%;
+    text-align: center;
 }
 
 .bold {
     font-weight: 900;
     font-size: 24px;
+}
+
+.rights {
+    width: 100%;
+    text-align: right;
 }
