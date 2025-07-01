@@ -288,7 +288,7 @@ p {
 
 /* Фолбэк на флексе */
 
-/* .strengths-container {
+.strengths-container {
     display: flex;
     overflow-x: auto;
 }
@@ -296,11 +296,8 @@ p {
 .strengths-images {
     display: flex;
     align-items: flex-start;
+    gap: 21px;
 } 
-
-.strong-points-left {
-    margin-right: 21px;
-}*/
 
 @supports (display: grid) {
     .strengths-container {
@@ -326,19 +323,10 @@ p {
     line-height: 100%;
 }
 
-/* Фолбэк на флексе */
-
-/* .list-container {
-    display: flex;
-    justify-content: center;
-} */
-
-@supports(display: grid) {
-    .list-container {
-        display: grid;
-        justify-content: center;
-    }
-}
+.list-container {
+    margin: 0 auto;
+    width: fit-content;
+} 
 
 .strengths-list {
     font-family: "Bitter";
