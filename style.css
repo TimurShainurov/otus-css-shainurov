@@ -29,6 +29,7 @@ body {
     font-weight: 700;
     margin: 0 auto;
     max-width: 1440px;
+
 }
 
 .header {
@@ -36,6 +37,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 16px 20px 16px 23px;
+    gap: 20px;
 }
 
 .header-title {
@@ -52,18 +54,32 @@ body {
 
 .nav-menu {
     display: flex;
-    gap: 55px;
     align-items: center;
+    gap: 55px;
 }
 
 /* ul и а для сброса стилей */
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.tablet {
+    display: none;
+}
+
+.nav-list--strong-points {
+    white-space: nowrap;
+}
+
+.nav-list--message {
+    display: block;
 }
 
 .hero-block {
@@ -103,7 +119,7 @@ a {
     max-width: 1165px;
     margin: 0 auto;
     display: flex;
-    padding: 151px 0 150px 0;
+    padding: 151px calc(137/1440*100vw) 150px;
 }
 
 .main-image {
@@ -146,7 +162,15 @@ a {
 .professions {
     font-weight: 500;
     font-size: 18px;
-    margin: 0;
+    display: block;
+}
+
+.professions li{
+    display: inline;
+}
+
+.professions li:not(:last-of-type)::after{
+    content: " /";
 }
 
 .hyphen {
@@ -162,6 +186,7 @@ a {
 
 .quote-text {
     line-height: normal;
+    display: inline-block;
 }
 
 p {
@@ -169,7 +194,7 @@ p {
 }
 
 .designers {
-    padding-left: 20px;
+    padding: 0 0 150px 20px;
 }
 
 .designers-subtitle {
@@ -219,8 +244,7 @@ p {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
-    padding: 150px 0;
-    margin: 0 20px;
+    padding: 0 20px 150px;
 }
 
 .website {
@@ -297,7 +321,7 @@ p {
     display: flex;
     align-items: flex-start;
     gap: 21px;
-} 
+}
 
 @supports (display: grid) {
     .strengths-container {
@@ -324,17 +348,14 @@ p {
 }
 
 .list-container {
-    margin: 0 auto;
     width: fit-content;
-} 
+    margin: 0 auto;
+}
 
 .strengths-list {
     font-family: "Bitter";
     font-size: 34px;
     font-weight: 400;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
 }
 
 .strengths-list li {
@@ -380,4 +401,278 @@ p {
 .rights {
     width: 100%;
     text-align: right;
+}
+
+
+
+@media(max-width:768px) {
+
+    body {
+        max-width: 768px;
+    }
+
+    .header {
+        padding: 18px 0;
+    }
+
+    .header-title {
+        display: none;
+    }
+
+    .navigation {
+        width: 100%;
+    }
+
+    .nav-menu {
+        justify-content: space-around;
+        gap: 0px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .nav-list {
+        font-family: "Bitter";
+    }
+
+    .tablet {
+        display: block;
+        font-size: 40px;
+        font-weight: 400;
+    }
+    
+    .hero-block {
+        background: none;
+        min-height: auto;
+        display: block;
+    }
+
+    .center-block {
+        min-width: auto;
+        min-height: 303px;
+    }
+
+    .main-title {
+        text-align: center;
+        font-size: 70px;
+        font-weight: 300;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .background-wrap {
+        max-width: 768px;
+        aspect-ratio: 768/382;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .biography {
+        display: flex;
+        flex-direction: column;
+        padding: 80px 0 0 0;
+
+    }
+
+    .main-image {
+        order: 4;
+        width: 100%;
+        aspect-ratio: 768 / 400;
+        object-fit: cover;
+    }
+
+    .subtitle-container {
+        order: 0;
+    }
+
+    .subtitle {
+        font-size: 18px;
+        margin: 0
+    }
+
+    .rotated {
+        text-align: right;
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
+
+    .right-container {
+        padding-left: 31px;
+        width: 100%;
+        max-width: 768px;
+        box-sizing: border-box;
+    }
+
+    .main-text {
+        font-size: 64px;
+        margin: 41px 0 35px 0;
+        order: 3;
+        font-weight: 400;
+    }
+
+    .biography-main-text::before {
+        content: "- ";
+    }
+
+    .professions li{
+        display: block;
+    }
+
+    .professions li::before {
+        content: "- ";
+    }
+
+    .professions li:not(:last-of-type)::after{
+        content: "";
+    }
+
+    .hyphen {
+        display: none;
+    }
+
+    .quote {
+        font-size: 30px;
+        padding-right: 28px;
+        font-weight: 300;
+    }
+
+    .designers {
+        padding: 80px 0 0 16px;
+    }
+
+    .designers-subtitle {
+        margin: 0 0 32px 0;
+    }
+
+    .image-wrap img {
+        max-width: 310px;
+        aspect-ratio: 310/437;
+        object-fit: cover;
+    }
+
+    .end-alignment {
+        align-items: flex-start;
+    }
+
+    .left-alignment {
+        min-width: auto;
+    }
+
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+        padding: 80px 16px 0;
+    }
+
+    .website {
+        order: 2;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .website-link.rotated {
+        text-align: left;
+    }
+
+    .creativity {
+        position: static;
+    }
+
+    .testimonials-image {
+        display: none;
+    }
+
+    .testimonials-header {
+        order: 0;
+    }
+
+    .testimonials-right {
+        order: 1;
+        flex-direction: row;
+    }
+
+    .center {
+        width: 50%;
+        margin-top: 29px;
+    }
+
+    .testimonials-image-right {
+        min-width: 336px;
+        aspect-ratio: 336/330;
+        object-fit: cover;
+    }
+
+    .strong-points {
+        padding: 80px 0 80px 16px;
+    }
+
+    .strong-points-subtitile {
+        margin: 0;
+    }
+
+    .strengths-container {
+        margin-top: 30px;
+    }
+
+    .strengths-images {
+        order: 1;
+    }
+
+    .strengths-container img {
+        max-width: 310px;
+        aspect-ratio: 310 / 450;
+        object-fit: cover;
+    }
+
+    .strengths {
+        order: 0;
+        margin: 0;
+    }
+
+    .strengths-subtitle {
+        font-size: 46px;
+        padding: 0;
+        margin: 0 0 24px 0;
+
+    }
+    .list-container {
+        justify-content: start;
+    }
+
+    .strengths-list {
+        font-size: 24px;
+        padding-left: 16px;
+    }
+
+    .strengths-list li {
+        margin-bottom: 8px;
+    }
+
+    .strengths-coffee-shop {
+        margin: 0 20px 0 17px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        order: 1;
+    }
+
+    .product {
+        order: 0;
+        text-align: end;
+    }
+
+    .rights {
+        order: 2;
+        text-align: left;
+        margin-top: 8px;
+    }
 }
