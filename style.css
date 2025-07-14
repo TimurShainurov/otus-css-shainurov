@@ -21,6 +21,7 @@
 
 * {
     line-height: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -38,6 +39,7 @@ body {
     align-items: center;
     padding: 16px 20px 16px 23px;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .header-title {
@@ -49,7 +51,6 @@ body {
 
 .navigation {
     font-weight: 500;
-    overflow-x: auto;
 }
 
 .nav-menu {
@@ -116,10 +117,10 @@ a {
 }
 
 .biography {
-    max-width: 1165px;
-    margin: 0 auto;
     display: flex;
-    padding: 151px calc(137/1440*100vw) 150px;
+    padding: 150px 30px;
+    max-width: 1225px;
+    margin: 0 auto;
 }
 
 .main-image {
@@ -165,11 +166,11 @@ a {
     display: block;
 }
 
-.professions li{
+.professions li {
     display: inline;
 }
 
-.professions li:not(:last-of-type)::after{
+.professions li:not(:last-of-type)::after {
     content: " /";
 }
 
@@ -273,6 +274,8 @@ p {
 
 .image-container {
     grid-column: span 4;
+    display: flex;
+    align-items: center;
 }
 
 .testimonials-image {
@@ -300,6 +303,10 @@ p {
 .center {
     font-size: 32px;
     text-align: center;
+}
+
+.testimonials-image-right {
+    width: 100%;
 }
 
 .strong-points {
@@ -403,9 +410,26 @@ p {
     text-align: right;
 }
 
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .header {
+        justify-content: center;
+    }
 
+    .navigation {
+        width: 100%;
+    }
 
-@media(max-width:768px) {
+    .nav-menu {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .quote-text {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
 
     body {
         max-width: 768px;
@@ -441,7 +465,7 @@ p {
         font-size: 40px;
         font-weight: 400;
     }
-    
+
     .hero-block {
         background: none;
         min-height: auto;
@@ -465,7 +489,7 @@ p {
 
     .background-wrap {
         max-width: 768px;
-        aspect-ratio: 768/382;
+        min-height: 382px;
         object-fit: cover;
         width: 100%;
     }
@@ -517,7 +541,7 @@ p {
         content: "- ";
     }
 
-    .professions li{
+    .professions li {
         display: block;
     }
 
@@ -525,7 +549,7 @@ p {
         content: "- ";
     }
 
-    .professions li:not(:last-of-type)::after{
+    .professions li:not(:last-of-type)::after {
         content: "";
     }
 
@@ -599,12 +623,11 @@ p {
     .center {
         width: 50%;
         margin-top: 29px;
+        padding: 0;
     }
 
-    .testimonials-image-right {
-        min-width: 336px;
-        aspect-ratio: 336/330;
-        object-fit: cover;
+    .picture {
+        width: 46%;
     }
 
     .strong-points {
@@ -640,8 +663,9 @@ p {
         margin: 0 0 24px 0;
 
     }
+
     .list-container {
-        justify-content: start;
+        margin: 0;
     }
 
     .strengths-list {
@@ -674,5 +698,25 @@ p {
         order: 2;
         text-align: left;
         margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .main-image {
+        aspect-ratio: 450/400;
+    }
+
+    .testimonials-right {
+        flex-wrap: wrap;
+    }
+
+    .center {
+        width: 100%;
+        padding: 0 38px;
+    }
+
+    .picture {
+        width: 100%;
     }
 }

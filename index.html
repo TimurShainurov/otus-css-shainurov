@@ -48,13 +48,11 @@
                 <span class="title">Modern Web Studio</span>
             </div>
             <div class="tablet">
-                <img src="img/bkg-modstudio.jpg" alt="background"
-                class="background-wrap">
+                <img class="background-wrap" src="img/bkg-modstudio.jpg" alt="background">
             </div>
         </article>
 
         <article class="biography" id="biography">
-
             <img src="img/katya-mills.jpg"
                 alt="A woman with light curly hair, turned away, walks barefoot through the desert. She is wearing a black hat and a dress with a pattern of orange flowers."
                 class="main-image">
@@ -166,11 +164,13 @@
                     <p class="quote-text">I just really want to do good work and work with some great people, people who
                         challenge me.</p>
                 </blockquote>
-                <div>
-                    <img src="img/testimonials-right.jpg"
-                        alt="A person walking on a paved surface, holding a white net bag. Inside the net bag, there are orange sweater and some printed materials like magazines or newspapers. The person is wearing light-colored pants and white sneakers. The background includes a brick wall."
-                        class="testimonials-image-right">
-                </div>
+                        <picture class="image-container">
+                            <source media="(max-width:450px)" srcset="img/testimonials-right-mobile.jpg">
+                            <source media="(max-width:768px)" srcset="img/testimonials-right-tablet.jpg">
+                            <img src="img/testimonials-right.jpg"
+                                alt="A person walking on a paved surface, holding a white net bag. Inside the net bag, there are orange sweater and some printed materials like magazines or newspapers. The person is wearing light-colored pants and white sneakers. The background includes a brick wall."
+                                class="testimonials-image-right">
+                        </picture>
             </section>
         </article>
 
