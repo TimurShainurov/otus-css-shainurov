@@ -13,27 +13,28 @@
 
 <body>
     <header class="header">
-        <span class="header-title">Mod</span>
-        <nav class="navigation">
-            <ul class="nav-menu">
+        <span class="header__title">Mod</span>
+        <nav class="menu">
+            <ul class="menu__list">
                 <li>
-                    <a href="#biography" class="desktop">Biography</a>
-                    <a href="#biography" class=" nav-list tablet">B</a>
+                    <a class="menu__link menu__link--dekstop" href="#biography">Biography</a>
+                    <a class="menu__link menu__link--tablet" href="#biography">B</a>
                 </li>
                 <li>
-                    <a href="#designers" class="desktop">Designers</a>
-                    <a href="#designers" class="nav-list tablet">D</a>
+                    <a href="#designers" class="menu__link menu__link--dekstop">Designers</a>
+                    <a href="#designers" class="menu__link menu__link--tablet">D</a>
                 </li>
                 <li>
-                    <a href="#testimonials" class="desktop">Testimonials</a>
-                    <a href="#testimonials" class="nav-list tablet">T</a>
+                    <a href="#testimonials" class="menu__link menu__link--dekstop">Testimonials</a>
+                    <a href="#testimonials" class="menu__link menu__link--tablet">T</a>
                 </li>
                 <li>
-                    <a href="#strong-points" class="desktop nav-list--strong-points">Strong points</a>
-                    <a href="#strong-points" class="nav-list tablet">S</a>
+                    <a href="#strong-points" class="menu__link menu__link--dekstop menu__link--strong-points">Strong
+                        points</a>
+                    <a href="#strong-points" class="menu__link menu__link--tablet">S</a>
                 </li>
-                <li class="message-icon">
-                    <a href="#" class="nav-list--message">
+                <li>
+                    <a href="#" class="menu__link menu__link--message">
                         <img src="img/icon-message.png" alt="Message icon.">
                     </a>
                 </li>
@@ -42,87 +43,89 @@
     </header>
 
     <main>
-        <article class="hero-block">
-            <div class="center-block">
-                <h1 class="main-title">Mod Studio</h1>
-                <span class="title">Modern Web Studio</span>
+        <!-- 
+        <article class="hero-block hero-block__wrap">
+
+            <div class="hero-block__box box">
+                <h1 class="box__title">Mod Studio</h1>
+                <span class="box__description">Modern Web Studio</span>
             </div>
             <div class="tablet">
-                <img class="background-wrap" src="img/bkg-modstudio.jpg" alt="background">
+                <img src="img/bkg-modstudio.jpg" alt="background" class="background-wrap">
             </div>
-        </article>
+        </article> -->
+
+        <div class="wrap">
+            <div class="hero-block"></div>
+            <div class="hero-box">
+                <h1 class="hero-box__title">Mod Studio</h1>
+                <span class="hero-box__description">Modern Web Studio</span>
+            </div>
+        </div>
 
         <article class="biography" id="biography">
-            <img src="img/katya-mills.jpg"
-                alt="A woman with light curly hair, turned away, walks barefoot through the desert. She is wearing a black hat and a dress with a pattern of orange flowers."
-                class="main-image">
-
-            <div class="subtitle-container">
-                <h2 class="subtitle rotated">Biography</h2>
-            </div>
-            <div class="right-container">
-                <h3 class="main-text biography-main-text">Katya Mills</h3>
-                <div>
-                    <span class="professions">Art Director</span>
-                    <ul class="professions">
+            <img class="biography__image" src="img/katya-mills.jpg"
+                alt="A woman with light curly hair, turned away, walks barefoot through the desert. She is wearing a black hat and a dress with a pattern of orange flowers.">
+            <h2 class="subtitle subtitle--rotated subtitle--long">Biography</h2>
+            <div class="biography__text">
+                <h3 class="text-title text-title--hyphen">Katya Mills</h3>
+                <div class="biography__proffesions">
+                    <span>Art Director</span>
+                    <ul>
                         <li>Scenography</li>
                         <li>Styling</li>
                         <li>Creative Photography</li>
                         <li>Design</li>
                     </ul>
-                    <!-- <p class="professions">Scenography / Styling / Creative Photography / Design</p> -->
-
                 </div>
-                <div>
-                    <img src="img/rectangle.jpg" alt="Hyphen for quote." class="hyphen">
-                    <blockquote class="quote">
-                        “The more I deal with the work as something that is my own, as something that is personal, the
-                        more successful it is.”
-                    </blockquote>
-                </div>
+                <blockquote class="quote quote--hyphen">
+                    “The more I deal with the work as something that is my own, as something that is personal,
+                    the
+                    more successful it is.”
+                </blockquote>
             </div>
         </article>
 
         <article id="designers" class="designers">
-            <h2 class="subtitle designers-subtitle">Designers</h2>
-            <div class="designers-container">
-                <figure class="image-wrap end-alignment">
+            <h2 class="subtitle subtitle__designers">Designers</h2>
+            <div class="designers-content">
+                <figure class="figure figure--end-alignment">
                     <img src="img/jess-wonder.jpg"
                         alt="A fair-haired girl turns her head away, gazing into the distance at the blue sky and mountains. She is wearing a black jacket, a white sweater, a black hat, and a plaid scarf.">
-                    <figcaption class="figcaption left-alignment">
-                        <p><span class="uppercase">Jess Wonder</span></p>
-                        <p>From/ <span class="description">Be more flower</span></p>
-                        <p>Skills/ <span class="description">Design Strategy / Marketing</span></p>
+                    <figcaption class="figcaption figcaption--wider">
+                        <p><span class="figcaption__text figcaption__text--uppercase">Jess Wonder</span></p>
+                        <p>From/ <span class="figcaption__text figcaption__text--lighter">Be more flower</span></p>
+                        <p>Skills/ <span class="figcaption__text figcaption__text--lighter">Design Strategy / Marketing</span></p>
                     </figcaption>
                 </figure>
 
-                <figure class="image-wrap">
+                <figure class="figure">
                     <img src="img/kameron-clein.jpg"
                         alt="A person is holding a transparent, rectangular handbag with a black zipper and trim. Inside the bag, there is a small red purse and a white item, possibly a phone or notebook. The person is dressed in a black long-sleeve top, a white undershirt, and light blue jeans. The photo is taken from the chest down, so the person's face is not visible">
                     <figcaption class="figcaption">
-                        <p><span class="uppercase">Kameron Clein</span></p>
-                        <p>From/ <span class="description">Be more flower</span></p>
-                        <p>Skills/ <span class="description">Design Strategy / Marketing</span></p>
+                        <p><span class="figcaption__text figcaption__text--uppercase">Kameron Clein</span></p>
+                        <p>From/ <span class="figcaption__text figcaption__text--lighter">Be more flower</span></p>
+                        <p>Skills/ <span class="figcaption__text figcaption__text--lighter">Design Strategy / Marketing</span></p>
                     </figcaption>
                 </figure>
 
-                <figure class="image-wrap">
+                <figure class="figure">
                     <img src="img/louisse-red.jpg"
                         alt="A person sitting outdoors holding an iced coffee in their left hand. They are wearing light blue jeans and a white shirt. On their lap, there is a black notebook with sunglasses resting on top. Next to the notebook is a transparent pouch containing a smartphone and some papers. The scene is well-lit, suggesting it's a sunny day.">
                     <figcaption class="figcaption">
-                        <p><span class="uppercase">Louisse Red</span></p>
-                        <p>From/ <span class="description">Be more flower</span></p>
-                        <p>Skills/ <span class="description">Design Strategy / Marketing</span></p>
+                        <p><span class="figcaption__text figcaption__text--uppercase">Louisse Red</span></p>
+                        <p>From/ <span class="figcaption__text figcaption__text--lighter">Be more flower</span></p>
+                        <p>Skills/ <span class="figcaption__text figcaption__text--lighter">Design Strategy / Marketing</span></p>
                     </figcaption>
                 </figure>
 
-                <figure class="image-wrap">
+                <figure class="figure">
                     <img src="img/kameron-clein.jpg"
                         alt="A person is holding a transparent, rectangular handbag with a black zipper and trim. Inside the bag, there is a small red purse and a white item, possibly a phone or notebook. The person is dressed in a black long-sleeve top, a white undershirt, and light blue jeans. The photo is taken from the chest down, so the person's face is not visible">
                     <figcaption class="figcaption">
-                        <p><span class="uppercase">Kameron Clein</span></p>
-                        <p>From/ <span class="description">Be more flower</span></p>
-                        <p>Skills/ <span class="description">Design Strategy / Marketing</span></p>
+                        <p><span class="figcaption__text figcaption__text--uppercase">Kameron Clein</span></p>
+                        <p>From/ <span class="figcaption__text figcaption__text--lighter">Be more flower</span></p>
+                        <p>Skills/ <span class="figcaption__text figcaption__text--lighter">Design Strategy / Marketing</span></p>
                     </figcaption>
                 </figure>
             </div>
@@ -131,20 +134,20 @@
 
         <article id="testimonials" class="testimonials">
             <div class="website">
-                <div class="website-link rotated">
-                    <span class="website-bold">Website</span>
+                <div class="website__link">
+                    <span class="website__text website__text--bold">Website</span>
                     <br>
                     <a href="#">www.whitepapers.com</a>
                 </div>
 
-                <div class="website-link rotated creativity">
-                    <span class="website-bold">Creativity</span>
+                <div class="website__link website__link--upper">
+                    <span class="website__text website__text--bold">Creativity</span>
                     <br>
                     <a href="#">www.whitepapers.com</a>
                 </div>
 
-                <div class="website-link rotated creativity">
-                    <span class="website-bold">Creativity</span>
+                <div class="website__link website__link--upper">
+                    <span class="website__text website__text--bold">Creativity</span>
                     <br>
                     <a href="#">www.whitepapers.com</a>
                 </div>
@@ -153,30 +156,30 @@
             <div class="image-container">
                 <img src="img/coffee-shop.jpg"
                     alt="A spacious coffee shop with a wide brown counter; the walls display drink menus and prices. In the corner, a girl sits by a large window, gazing outside where the street is bathed in bright sunlight."
-                    class="testimonials-image">
+                    class="image-container__testimonials">
             </div>
-            <div class="subtitle-container">
-                <h2 class="subtitle rotated testimonials-header">Testimonials</h2>
+            <!-- <div class="subtitle-container"> -->
+            <h2 class="subtitle subtitle--rotated subtitle__testimonials">Testimonials</h2>
 
-            </div>
-            <section class="testimonials-right">
-                <blockquote class="quote center">
-                    <p class="quote-text">I just really want to do good work and work with some great people, people who
+            <!-- </div> -->
+            <div class="testimonials-main">
+                <blockquote class="quote quote--center">
+                    <p class="quote__text">I just really want to do good work and work with some great people, people who
                         challenge me.</p>
                 </blockquote>
-                        <picture class="image-container picture">
-                            <source media="(max-width:450px)" srcset="img/testimonials-right-mobile.jpg">
-                            <source media="(max-width:768px)" srcset="img/testimonials-right-tablet.jpg">
-                            <img src="img/testimonials-right.jpg"
-                                alt="A person walking on a paved surface, holding a white net bag. Inside the net bag, there are orange sweater and some printed materials like magazines or newspapers. The person is wearing light-colored pants and white sneakers. The background includes a brick wall."
-                                class="testimonials-image-right">
-                        </picture>
-            </section>
+                <picture class="image-container picture">
+                    <source media="(max-width:450px)" srcset="img/testimonials-right-mobile.jpg">
+                    <source media="(max-width:768px)" srcset="img/testimonials-right-tablet.jpg">
+                    <img src="img/testimonials-right.jpg"
+                        alt="A person walking on a paved surface, holding a white net bag. Inside the net bag, there are orange sweater and some printed materials like magazines or newspapers. The person is wearing light-colored pants and white sneakers. The background includes a brick wall."
+                        class="testimonials-main__image">
+                </picture>
+            </div>
         </article>
 
 
         <article id="strong-points" class="strong-points">
-            <h2 class="subtitle strong-points-subtitile">Strong points</h2>
+            <h2 class="subtitle subtitle__strengths">Strong points</h2>
             <div class="strengths-container">
                 <div class="strengths-images">
                     <img src="img/strong-points-left.jpg"
@@ -187,10 +190,10 @@
                         alt="The space features warm brown parquet floors, a plush circular chair positioned centrally, and a bold black painting as a backdrop. A potted cactus rests in the lower right corner, adding a touch of greenery.">
                 </div>
 
-                <div class="strengths">
-                    <h3 class="main-text strengths-subtitle">Strengths</h3>
+                <div class="strengths-text">
+                    <h3 class="text-title text-title__strengths">Strengths</h3>
                     <div class="list-container">
-                        <ul class="strengths-list">
+                        <ul class="list-container__content">
                             <li>Interiors</li>
                             <li>Outdoors</li>
                             <li>Portraits</li>
@@ -206,20 +209,20 @@
                 </div>
                 <img src="img/coffee-shop.jpg"
                     alt="A spacious coffee shop with a wide brown counter; the walls display drink menus and prices. In the corner, a girl sits by a large window, gazing outside where the street is bathed in bright sunlight."
-                    class="strengths-coffee-shop">
+                    class="strengths-container__image">
             </div>
         </article>
     </main>
     <footer class="footer">
-        <address class="contact-info">
+        <address class="footer__contact-info">
             <a href="tel:+79211234567">+7 921 123-45-67</a>
             <br>
-            <a href="mailto:info@modstudio.com" class="uppercase">info@modstudio.com</a>
+            <a href="mailto:info@modstudio.com" class="footer__link footer__link--uppercase">info@modstudio.com</a>
         </address>
-        <span class="product">
-            A product of <span class="uppercase bold">Mod</span>
+        <span class="footer__product">
+            A product of <span class="footer__text footer__text--bold">Mod</span>
         </span>
-        <span class="rights">© 2023 Mod Media. All rights reserved</span>
+        <span class="footer__rights">© 2023 Mod Media. All rights reserved</span>
     </footer>
 </body>
 

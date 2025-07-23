@@ -1,0 +1,18 @@
+@mixin font ($ff, $fs, $fw) {
+    font-family: $ff;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin flex ($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin column($jc,$g) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $jc;
+    gap: $g;
+}
