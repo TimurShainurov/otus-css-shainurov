@@ -1,21 +1,21 @@
 @font-face {
     font-family: "Roboto";
     src: local("Roboto Regular"),
-        url("/fonts/Roboto/static/Roboto-Regular.ttf");
+        url("fonts/Roboto/static/Roboto-Regular.ttf");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "Roboto";
     src: local("Roboto Medium"),
-        url("/fonts/Roboto/static/Roboto-Medium.ttf");
+        url("fonts/Roboto/static/Roboto-Medium.ttf");
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Roboto";
     src: local("Roboto Bold"),
-        url("/fonts/Roboto/static/Roboto-Bold.ttf");
+        url("fonts/Roboto/static/Roboto-Bold.ttf");
     font-weight: 700;
 }
 
@@ -84,7 +84,7 @@ a {
 }
 
 .hero-block {
-    background: url(/img/bkg-modstudio.jpg) no-repeat center/cover;
+    background: url(img/bkg-modstudio.jpg) no-repeat center/cover;
     min-height: 630px;
     display: flex;
     flex-grow: 1;
