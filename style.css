@@ -1,21 +1,18 @@
 @charset "UTF-8";
 @font-face {
-    font-family: "Roboto";
-    src: local("Roboto Regular"),
-        url("fonts/Roboto/static/Roboto-Regular.ttf");
-    font-weight: 400;
+  font-family: "Roboto";
+  src: local("Roboto Regular"), url("fonts/Roboto/static/Roboto-Regular.ttf");
+  font-weight: 400;
 }
 @font-face {
-    font-family: "Roboto";
-    src: local("Roboto Medium"),
-        url("fonts/Roboto/static/Roboto-Medium.ttf");
-    font-weight: 500;
+  font-family: "Roboto";
+  src: local("Roboto Medium"), url("fonts/Roboto/static/Roboto-Medium.ttf");
+  font-weight: 500;
 }
 @font-face {
-    font-family: "Roboto";
-    src: local("Roboto Bold"),
-        url("fonts/Roboto/static/Roboto-Bold.ttf");
-    font-weight: 700;
+  font-family: "Roboto";
+  src: local("Roboto Bold"), url("fonts/Roboto/static/Roboto-Bold.ttf");
+  font-weight: 700;
 }
 *,
 *::before,
@@ -86,7 +83,7 @@ body {
 }
 
 .hero-block {
-  background: url(/img/bkg-modstudio.jpg) no-repeat center/cover;
+  background: url(img/bkg-modstudio.jpg) no-repeat center/cover;
   min-height: 630px;
   width: 100%;
 }
