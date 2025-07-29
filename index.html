@@ -11,7 +11,7 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body class="page">
     <header class="header">
         <span class="header__title">Mod</span>
         <nav class="menu">
@@ -33,10 +33,10 @@
                         points</a>
                     <a href="#strong-points" class="menu__link menu__link--tablet">S</a>
                 </li>
-                <li>
-                    <a href="#" class="menu__link menu__link--message">
+                <li>    
+                    <button type="button" href="#" class="menu__link menu__link--message" onclick="window['some-dialog-id'].showModal();">
                         <img src="img/icon-message.png" alt="Message icon.">
-                    </a>
+                    </button>
                 </li>
             </ul>
         </nav>
@@ -146,10 +146,7 @@
                     alt="A spacious coffee shop with a wide brown counter; the walls display drink menus and prices. In the corner, a girl sits by a large window, gazing outside where the street is bathed in bright sunlight."
                     class="image-container__testimonials">
             </div>
-            <!-- <div class="subtitle-container"> -->
             <h2 class="subtitle subtitle--rotated subtitle__testimonials">Testimonials</h2>
-
-            <!-- </div> -->
             <div class="testimonials-main">
                 <blockquote class="quote quote--center">
                     <p class="quote__text">I just really want to do good work and work with some great people, people who
@@ -212,6 +209,18 @@
         </span>
         <span class="footer__rights">© 2023 Mod Media. All rights reserved</span>
     </footer>
+
+    <dialog class="dialog-wrap" id="some-dialog-id">
+        <form action="" class="dialog">
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nesciunt dignissimos est nam ex. Aliquam optio eius ad voluptatum, sunt eligendi voluptatibus labore deleniti explicabo, blanditiis sed culpa commodi pariatur.
+                <div class="modal-buttons">
+                    <button class="button" id="cancel" type="button" onclick="window['some-dialog-id'].close()">Cancel</button>
+                    <button class="button button--black" id="send">Send</button>
+                </div>
+            </div>
+            
+        </form>
+      </dialog>
 </body>
 
 </html>

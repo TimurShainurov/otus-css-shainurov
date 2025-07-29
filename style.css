@@ -41,6 +41,10 @@ body {
   max-width: 1440px;
 }
 
+.page--scroll-locked {
+  overflow: hidden;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -72,6 +76,8 @@ body {
 }
 .menu__link--message {
   display: block;
+  border: none;
+  cursor: pointer;
 }
 
 .wrap {
@@ -378,6 +384,50 @@ body {
 .footer__rights {
   width: 100%;
   text-align: right;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  width: 46%;
+  background: none;
+  border: 1px solid #B3B3B3;
+  border-radius: 8px;
+  padding: 11px 0;
+  cursor: pointer;
+}
+.button--black {
+  background-color: black;
+  color: white;
+}
+.button--black::before {
+  content: "+";
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.dialog-wrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 33%;
+  max-width: 476px;
+  max-height: 589px;
+  border-radius: 10px;
+  border: none;
+  padding: 20px 26px 26px 26px;
+}
+.dialog-wrap::backdrop {
+  background-color: rgba(129, 126, 126, 0.6);
 }
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
