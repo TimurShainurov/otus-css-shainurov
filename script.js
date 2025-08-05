@@ -1,6 +1,6 @@
 const body = document.querySelector('.page');
 const openModal = document.querySelector('.menu__link--message');
-const closeModal = document.querySelectorAll('.button');
+const closeModal = document.querySelector('.button');
 
 
 function switchModal () {
@@ -8,5 +8,5 @@ function switchModal () {
 }
 
 openModal.addEventListener('click', switchModal);
+closeModal.addEventListener('click', switchModal);
 
-closeModal.forEach((button) => button.addEventListener('click', switchModal));
