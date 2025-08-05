@@ -21,20 +21,19 @@
                     <a class="menu__link menu__link--tablet" href="#biography">B</a>
                 </li>
                 <li>
-                    <a href="#designers" class="menu__link menu__link--dekstop">Designers</a>
-                    <a href="#designers" class="menu__link menu__link--tablet">D</a>
+                    <a class="menu__link menu__link--dekstop" href="#designers">Designers</a>
+                    <a class="menu__link menu__link--tablet" href="#designers">D</a>
                 </li>
                 <li>
-                    <a href="#testimonials" class="menu__link menu__link--dekstop">Testimonials</a>
-                    <a href="#testimonials" class="menu__link menu__link--tablet">T</a>
+                    <a class="menu__link menu__link--dekstop" href="#testimonials">Testimonials</a>
+                    <a class="menu__link menu__link--tablet" href="#testimonials">T</a>
                 </li>
                 <li>
-                    <a href="#strong-points" class="menu__link menu__link--dekstop menu__link--strong-points">Strong
-                        points</a>
-                    <a href="#strong-points" class="menu__link menu__link--tablet">S</a>
+                    <a class="menu__link menu__link--dekstop menu__link--strong-points" href="#strong-points">Strong points</a>
+                    <a class="menu__link menu__link--tablet" href="#strong-points">S</a>
                 </li>
                 <li>    
-                    <button type="button" href="#" class="menu__link menu__link--message" onclick="window['some-dialog-id'].showModal();">
+                    <button class="menu__link menu__link--message" type="button" onclick="window['some-dialog-id'].showModal();">
                         <img src="img/icon-message.png" alt="Message icon.">
                     </button>
                 </li>
@@ -74,7 +73,7 @@
             </div>
         </article>
 
-        <article id="designers" class="designers">
+        <article class="designers" id="designers">
             <h2 class="subtitle subtitle__designers">Designers</h2>
             <div class="designers-content">
                 <figure class="figure figure--end-alignment">
@@ -120,7 +119,7 @@
         </article>
 
 
-        <article id="testimonials" class="testimonials">
+        <article class="testimonials" id="testimonials">
             <div class="website">
                 <div class="website__link">
                     <span class="website__text website__text--bold">Website</span>
@@ -163,13 +162,13 @@
         </article>
 
 
-        <article id="strong-points" class="strong-points">
+        <article class="strong-points" id="strong-points">
             <h2 class="subtitle subtitle__strengths">Strong points</h2>
             <div class="strengths-container">
                 <div class="strengths-images">
-                    <img src="img/strong-points-left.jpg"
-                        alt="A small bright room with a rectangular beige table and two soft chairs on either side. There is a laptop on the table, with a green plant visible behind it."
-                        class="strong-points-left">
+                    <img class="strong-points-left" 
+                        src="img/strong-points-left.jpg"
+                        alt="A small bright room with a rectangular beige table and two soft chairs on either side. There is a laptop on the table, with a green plant visible behind it.">
 
                     <img src="img/strong-points-right.jpg"
                         alt="The space features warm brown parquet floors, a plush circular chair positioned centrally, and a bold black painting as a backdrop. A potted cactus rests in the lower right corner, adding a touch of greenery.">
@@ -192,9 +191,9 @@
                         </ul>
                     </div>
                 </div>
-                <img src="img/coffee-shop.jpg"
-                    alt="A spacious coffee shop with a wide brown counter; the walls display drink menus and prices. In the corner, a girl sits by a large window, gazing outside where the street is bathed in bright sunlight."
-                    class="strengths-container__image">
+                <img class="strengths-container__image"
+                    src="img/coffee-shop.jpg"
+                    alt="A spacious coffee shop with a wide brown counter; the walls display drink menus and prices. In the corner, a girl sits by a large window, gazing outside where the street is bathed in bright sunlight.">
             </div>
         </article>
     </main>
@@ -202,7 +201,7 @@
         <address class="footer__contact-info">
             <a href="tel:+79211234567">+7 921 123-45-67</a>
             <br>
-            <a href="mailto:info@modstudio.com" class="footer__link footer__link--uppercase">info@modstudio.com</a>
+            <a class="footer__link footer__link--uppercase" href="mailto:info@modstudio.com">info@modstudio.com</a>
         </address>
         <span class="footer__product">
             A product of <span class="footer__text footer__text--bold">Mod</span>
@@ -211,13 +210,27 @@
     </footer>
 
     <dialog class="dialog-wrap" id="some-dialog-id">
-        <form action="" class="dialog">
-            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nesciunt dignissimos est nam ex. Aliquam optio eius ad voluptatum, sunt eligendi voluptatibus labore deleniti explicabo, blanditiis sed culpa commodi pariatur.
+        <form class="dialog" action="#">
+                <h2 class="dialog-content__subtitle">Get in touch</h2>
+                <p class="dialog-content__text">Do you have any questions? Have something to say? Don't be shy, write to us:</p>
+                
+                <div class="label-container">
+                    <label for="name" class="label">Name</label>
+                    <input class="modal-input" id="name" type="text" name="name" placeholder="3+ Characters" required autofocus>
+                </div>  
+                <div class="label-container">
+                    <label for="email" class="label">E-mail</label>
+                    <input class="modal-input" id="email" type="email" name="email" placeholder="name@email.com" required>
+                </div>  
+                <div class="label-container">
+                    <label for="textarea" class="label">Comment</label>
+                    <textarea class="modal-input" id="textarea" placeholder="Some text..." name="comment"></textarea>
+                </div>  
+        
                 <div class="modal-buttons">
-                    <button class="button" id="cancel" type="button" onclick="window['some-dialog-id'].close()">Cancel</button>
-                    <button class="button button--black" id="send" type="button" onclick="window['some-dialog-id'].close()">Send</button>
+                    <button class="button" id="cancel" type="reset" onclick="window['some-dialog-id'].close()">Cancel</button>
+                    <button class="button button--black" id="send" type="submit">Send</button>
                 </div>
-            </div>
             
         </form>
       </dialog>

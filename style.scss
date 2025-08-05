@@ -87,6 +87,7 @@ body {
         display: block;
         border: none;
         cursor: pointer;
+        background: none;
     }
 
 }
@@ -401,6 +402,41 @@ body {
     }
 }
 
+.dialog-wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // margin: 0 auto;
+    background-color: white;
+    width: 33%;
+    // max-width: 476px;
+    max-height: 589px;
+    border-radius: 10px;
+    border: none;
+    padding: 20px 26px 26px 26px;
+
+    &::backdrop {
+        background-color: #817E7E99;
+    }
+}
+
+.dialog {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.label {
+    display: block;
+}
+
+.modal-input {
+    display: block;
+    margin-top: 12px;
+    width: 100%;
+}
+
 .modal-buttons {
     display: flex;
     justify-content: space-between;
@@ -428,26 +464,6 @@ body {
             font-weight: 300;
             // color: white;
         }
-    }
-
-}
-
-.dialog-wrap {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    // margin: 0 auto;
-    background-color: white;
-    width: 33%;
-    max-width: 476px;
-    max-height: 589px;
-    border-radius: 10px;
-    border: none;
-    padding: 20px 26px 26px 26px;
-
-    &::backdrop {
-        background-color: #817E7E99;
     }
 
 }
