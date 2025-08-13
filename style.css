@@ -14,6 +14,21 @@
   src: local("Roboto Bold"), url("fonts/Roboto/static/Roboto-Bold.ttf");
   font-weight: 700;
 }
+@font-face {
+  font-family: "Bitter";
+  src: local("Bitter Regular"), url("fonts/Bitter/static/Bitter-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: local("PlayfairDisplay Medium"), url("fonts/PlayfairDisplay/static/PlayfairDisplay-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: local("PlayfairDisplay SemiBold"), url("fonts/PlayfairDisplay/static/PlayfairDisplay-SemiBold.ttf");
+  font-weight: 600;
+}
 *,
 *::before,
 *::after {
@@ -189,7 +204,7 @@ body {
   padding-left: 20px;
 }
 
-.subtitle__designers {
+.subtitle--margin-left-119 {
   margin: 0 0 30px 119px;
   line-height: normal;
 }
@@ -267,7 +282,7 @@ body {
   max-width: 451px;
 }
 
-.subtitle__testimonials {
+.subtitle--span {
   grid-column: span 2;
   margin-left: 4px;
 }
@@ -294,7 +309,7 @@ body {
   width: 100%;
 }
 
-.subtitle__strengths {
+.subtitle--margin-left-238 {
   margin: 0 0 30px 238px;
 }
 
@@ -326,7 +341,7 @@ body {
   margin: 0 20px 0 21px;
 }
 
-.text-title__strengths {
+.text-title--spacing {
   padding: 0 37px;
   margin-bottom: 28px;
 }
