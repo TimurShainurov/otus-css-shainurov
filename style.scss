@@ -63,6 +63,7 @@ a {
 
 @import "vars";
 @import "mixins";
+@import "extends";
 
 body {
     @include font("Roboto", 24px, 700);
@@ -79,10 +80,15 @@ body {
     flex-wrap: wrap;
     padding: 16px 20px 16px 23px;
     gap: 20px;
+    position: fixed;
+    max-width: $site-width;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
 
     &__title {
         @include font("Playfair Display", 86px, 600);
-        line-height: normal;
+        line-height: 120%;
     }
 }
 
@@ -93,6 +99,10 @@ body {
         display: flex;
         align-items: center;
         gap: 55px;
+    }
+
+    &__link {
+        @extend .hover-focus-link;
     }
 
     &__link--tablet {
@@ -111,6 +121,10 @@ body {
         font-size: 30px;
     }
 
+}
+
+.content {
+    padding-top: 135px;
 }
 
 .wrap {
@@ -276,6 +290,14 @@ body {
         transform: rotate(180deg);
         height: fit-content;
 
+        &-text {
+            @extend .hover-focus-link;
+            
+            &:focus {
+                outline-offset: 2px;
+            }
+        }
+
         &--upper {
             position: relative;
             right: 8px;
@@ -400,8 +422,17 @@ body {
         width: 100%;
     }
 
-    &__link--uppercase {
-        text-transform: uppercase;
+    &__link {
+        @extend .hover-focus-link;
+        
+        &:focus {
+            outline-offset: 4px;
+            text-decoration-color: #A07C72;
+        }
+
+        &--uppercase {
+            text-transform: uppercase;
+        }
     }
 
     &__product {
@@ -464,6 +495,7 @@ body {
     padding: 20px 26px 26px 26px;
     font-size: 16px;
     font-weight: 400;
+    position: relative;
 
     &__subtitle {
         font-size: 22px;
@@ -485,18 +517,16 @@ body {
 .input {
     position: relative;
     display: flex;
-    border: 1px solid #B3B3B3;
-    border-radius: 8px;
 
     &__field {
 
         display: block;
         width: 100%;
+        border: 1px solid #B3B3B3;
+        border-radius: 8px;
         outline: none;
-        border: none;
         padding: 12px 50px 12px 10px;
         font-size: 16px;
-        border-radius: 8px;
 
         &--high {
             min-height: 95px;
@@ -507,6 +537,41 @@ body {
                 display: none;
             }
         }
+
+        &:hover {
+            background-color: #EDEDED;
+        }
+
+        &:focus {
+            border-color: #E0B59F;
+
+            &::placeholder {
+                color: #A07C72;
+            }
+
+            &+.input__icon {
+                fill: #A07C72;
+
+                &--stroke {
+                    stroke: #A07C72;
+                }
+            }
+        }
+
+        &:active {
+            border-color: #000000;
+            color: #000000;
+        }
+
+        &:active+.input__icon {
+            fill: #000000;
+
+            &--stroke {
+                stroke: #000000;
+            }
+        }
+
+
     }
 
     &__icon {
@@ -514,9 +579,13 @@ body {
         top: 6px;
         right: 10px;
         pointer-events: none;
+        fill: #868686;
+
+        &--stroke {
+            stroke: #868686;
+        }
     }
 }
-
 
 .modal-buttons {
     display: flex;
@@ -533,6 +602,30 @@ body {
     border-radius: 8px;
     padding: 11px 0;
     cursor: pointer;
+    outline: transparent;
+    &--white {
+        &:hover {
+            background-color: #F5E0D6;
+            border-color: #ECC5B2;
+        }
+
+        &:active {
+            outline: none;
+            background-color: #EAC8B7;
+            border-color: #E0B59F;
+        }
+
+        &:focus {
+            outline: 1px solid #E0B59F;
+            outline-offset: 2px;
+            color: #A07C72;
+        }   
+
+        &:disabled {
+            color: #CCCCCC;
+            border-color: #CCCCCC;
+        }
+    }
 
     &--black {
         background-color: black;
@@ -547,8 +640,24 @@ body {
             font-weight: 300;
             margin-right: 5px;
         }
-    }
 
+        &:hover {
+            background-color: #A07C72;
+        }
+
+        &:active {
+            background-color: #E0B59F;
+        }
+
+        &:focus {
+            outline: 1.5px solid #E0B59F;
+            outline-offset: 2px;
+        }
+
+        &:disabled {
+            background-color: #CCCCCC;
+        }
+    }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
@@ -563,6 +672,10 @@ body {
             justify-content: space-between;
             gap: 0;
         }
+    }
+
+    .content {
+        padding-top: 186px;
     }
 
     .quote__text {
@@ -607,6 +720,10 @@ body {
             font-size: 40px;
             font-weight: 400;
         }
+    }
+
+    .content {
+        padding-top: 76px;
     }
 
     .wrap {

@@ -1,0 +1,4 @@
+.hover-focus-link {
+    outline: transparent;
+    @include customize-haf (#A07C72, #E0B59F, #A07C72, 2px solid #E0B59F);
+}

@@ -16,3 +16,20 @@
     justify-content: $jc;
     gap: $g;
 }
+
+@mixin customize-haf ($hov, $act, $foc, $foc-border) {
+    &:hover {
+        color: $hov;
+    }
+
+    &:active {
+        color: $act;
+    }
+
+    &:focus {
+        outline: none;
+        color: $foc;
+        outline: $foc-border;
+        outline-offset: 10px;
+    }
+}
