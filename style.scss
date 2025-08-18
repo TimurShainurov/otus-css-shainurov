@@ -65,7 +65,6 @@ a {
 @import "mixins";
 
 body {
-
     @include font("Roboto", 24px, 700);
     margin: 0 auto;
     max-width: $site-width;
@@ -100,7 +99,7 @@ body {
         display: none;
     }
 
-    &__link--strong-points {
+    &__link--nowrap {
         white-space: nowrap;
     }
 
@@ -109,6 +108,7 @@ body {
         border: none;
         cursor: pointer;
         background: none;
+        font-size: 30px;
     }
 
 }
@@ -428,17 +428,32 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // margin: 0 auto;
     background-color: white;
     width: 33%;
-    // max-width: 476px;
-    max-height: 589px;
+    max-width: 476px;
+    min-width: 400px;
     border-radius: 10px;
     border: none;
-    padding: 20px 26px 26px 26px;
 
     &::backdrop {
         background-color: #817E7E99;
+    }
+
+    &::-webkit-scrollbar {
+        width: 14px;
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: white;
+        border-radius: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #b5b3b3;
+        border-radius: 8px;
+        border: 3px solid transparent;
+        background-clip: content-box;
     }
 }
 
@@ -446,17 +461,62 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    padding: 20px 26px 26px 26px;
+    font-size: 16px;
+    font-weight: 400;
+
+    &__subtitle {
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    &__text {
+        line-height: 21px;
+    }
 }
 
-.label {
+.dialog-item__label {
     display: block;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
-.modal-input {
-    display: block;
-    margin-top: 12px;
-    width: 100%;
+.input {
+    position: relative;
+    display: flex;
+    border: 1px solid #B3B3B3;
+    border-radius: 8px;
+
+    &__field {
+
+        display: block;
+        width: 100%;
+        outline: none;
+        border: none;
+        padding: 12px 50px 12px 10px;
+        font-size: 16px;
+        border-radius: 8px;
+
+        &--high {
+            min-height: 95px;
+            resize: none;
+            font-family: inherit;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 6px;
+        right: 10px;
+        pointer-events: none;
+    }
 }
+
 
 .modal-buttons {
     display: flex;
@@ -474,16 +534,18 @@ body {
     padding: 11px 0;
     cursor: pointer;
 
-
     &--black {
         background-color: black;
         color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &::before {
             content: "+";
             font-size: 26px;
             font-weight: 300;
-            // color: white;
+            margin-right: 5px;
         }
     }
 
@@ -505,6 +567,11 @@ body {
 
     .quote__text {
         font-size: 24px;
+    }
+
+    .dialog-wrap {
+        width: 50%;
+        min-width: auto;
     }
 }
 
@@ -779,6 +846,11 @@ body {
             margin-top: 8px;
         }
     }
+
+    .dialog-wrap {
+        width: 58%;
+        min-width: auto;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -798,5 +870,9 @@ body {
 
     .picture {
         width: 100%;
+    }
+
+    .dialog-wrap {
+        width: 80%;
     }
 }
