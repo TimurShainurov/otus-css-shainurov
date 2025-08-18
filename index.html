@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/86e565dd5d.js" crossorigin="anonymous"></script>
     <title>Mod Studio</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,12 +27,13 @@
                     <a class="menu__link menu__link--tablet" href="#testimonials">T</a>
                 </li>
                 <li>
-                    <a class="menu__link menu__link--dekstop menu__link--strong-points" href="#strong-points">Strong points</a>
+                    <a class="menu__link menu__link--dekstop menu__link--nowrap" href="#strong-points">Strong
+                        points</a>
                     <a class="menu__link menu__link--tablet" href="#strong-points">S</a>
                 </li>
-                <li>    
+                <li>
                     <button class="menu__link menu__link--message" type="button" onclick="window['some-dialog-id'].showModal();">
-                        <img src="img/icon-message.png" alt="Message icon.">
+                        <i class="fa-regular fa-comment-dots"></i>
                     </button>
                 </li>
             </ul>
@@ -63,9 +65,8 @@
                     </ul>
                 </div>
                 <blockquote class="quote quote--hyphen">
-                    “The more I deal with the work as something that is my own, as something that is personal,
-                    the
-                    more successful it is.”
+                    “The more I deal with the work as something that is my own, as something that is personal, the more
+                    successful it is.”
                 </blockquote>
             </div>
         </article>
@@ -79,7 +80,8 @@
                     <figcaption class="figcaption figcaption--wider">
                         <p><span class="figcaption__text figcaption__text--uppercase">Jess Wonder</span></p>
                         <p>From/ <span class="figcaption__text figcaption__text--lighter">Be more flower</span></p>
-                        <p>Skills/ <span class="figcaption__text figcaption__text--lighter">Design Strategy / Marketing</span></p>
+                        <p>Skills/ <span class="figcaption__text figcaption__text--lighter">Design Strategy /
+                                Marketing</span></p>
                     </figcaption>
                 </figure>
 
@@ -89,7 +91,8 @@
                     <figcaption class="figcaption">
                         <p><span class="figcaption__text figcaption__text--uppercase">Kameron Clein</span></p>
                         <p>From/ <span class="figcaption__text figcaption__text--lighter">Be more flower</span></p>
-                        <p>Skills/ <span class="figcaption__text figcaption__text--lighter">Design Strategy / Marketing</span></p>
+                        <p>Skills/ <span class="figcaption__text figcaption__text--lighter">Design Strategy /
+                                Marketing</span></p>
                     </figcaption>
                 </figure>
 
@@ -99,7 +102,8 @@
                     <figcaption class="figcaption">
                         <p><span class="figcaption__text figcaption__text--uppercase">Louisse Red</span></p>
                         <p>From/ <span class="figcaption__text figcaption__text--lighter">Be more flower</span></p>
-                        <p>Skills/ <span class="figcaption__text figcaption__text--lighter">Design Strategy / Marketing</span></p>
+                        <p>Skills/ <span class="figcaption__text figcaption__text--lighter">Design Strategy /
+                                Marketing</span></p>
                     </figcaption>
                 </figure>
 
@@ -109,12 +113,12 @@
                     <figcaption class="figcaption">
                         <p><span class="figcaption__text figcaption__text--uppercase">Kameron Clein</span></p>
                         <p>From/ <span class="figcaption__text figcaption__text--lighter">Be more flower</span></p>
-                        <p>Skills/ <span class="figcaption__text figcaption__text--lighter">Design Strategy / Marketing</span></p>
+                        <p>Skills/ <span class="figcaption__text figcaption__text--lighter">Design Strategy /
+                                Marketing</span></p>
                     </figcaption>
                 </figure>
             </div>
         </article>
-
 
         <article class="testimonials" id="testimonials">
             <div class="website">
@@ -145,8 +149,8 @@
             <h2 class="subtitle subtitle--rotated subtitle--span">Testimonials</h2>
             <div class="testimonials-main">
                 <blockquote class="quote quote--center">
-                    <p class="quote__text">I just really want to do good work and work with some great people, people who
-                        challenge me.</p>
+                    <p class="quote__text">I just really want to do good work and work with some great people, people
+                        who challenge me.</p>
                 </blockquote>
                 <picture class="image-container picture">
                     <source media="(max-width:450px)" srcset="img/testimonials-right-mobile.jpg">
@@ -158,13 +162,11 @@
             </div>
         </article>
 
-
         <article class="strong-points" id="strong-points">
             <h2 class="subtitle subtitle--margin-left-238">Strong points</h2>
             <div class="strengths-container">
                 <div class="strengths-images">
-                    <img class="strong-points-left" 
-                        src="img/strong-points-left.jpg"
+                    <img class="strong-points-left" src="img/strong-points-left.jpg"
                         alt="A small bright room with a rectangular beige table and two soft chairs on either side. There is a laptop on the table, with a green plant visible behind it.">
 
                     <img src="img/strong-points-right.jpg"
@@ -188,8 +190,7 @@
                         </ul>
                     </div>
                 </div>
-                <img class="strengths-container__image"
-                    src="img/coffee-shop.jpg"
+                <img class="strengths-container__image" src="img/coffee-shop.jpg"
                     alt="A spacious coffee shop with a wide brown counter; the walls display drink menus and prices. In the corner, a girl sits by a large window, gazing outside where the street is bathed in bright sunlight.">
             </div>
         </article>
@@ -208,29 +209,48 @@
 
     <dialog class="dialog-wrap" id="some-dialog-id">
         <form class="dialog" action="#">
-                <h2 class="dialog__subtitle">Get in touch</h2>
-                <p class="dialog__text">Do you have any questions? Have something to say? Don't be shy, write to us:</p>
-                
-                <div class="label-container">
-                    <label for="name" class="label">Name</label>
-                    <input class="modal-input" id="name" type="text" name="name" placeholder="3+ Characters" required autofocus>
-                </div>  
-                <div class="label-container">
-                    <label for="email" class="label">E-mail</label>
-                    <input class="modal-input" id="email" type="email" name="email" placeholder="name@email.com" required>
-                </div>  
-                <div class="label-container">
-                    <label for="textarea" class="label">Comment</label>
-                    <textarea class="modal-input" id="textarea" placeholder="Some text..." name="comment"></textarea>
-                </div>  
-        
-                <div class="modal-buttons">
-                    <button class="button" id="cancel" type="reset" onclick="window['some-dialog-id'].close()">Cancel</button>
-                    <button class="button button--black" id="send" type="submit">Send</button>
+            <h2 class="dialog__subtitle">Get in touch</h2>
+            <p class="dialog__text">Do you have any questions? Have something to say?<br>Don't be shy, write to us:</p>
+            <div class="dialog-item">
+                <label for="name" class="dialog-item__label">Name</label>
+                <div class="input">
+                    <input class="input__field" id="name" type="text" name="name" placeholder="3+ Characters" required autofocus>
+                    <svg class="input__icon" width="31" height="31" viewBox="0 0 31 31">
+                        <use href="sprite.svg#icon-name"></use>
+                    </svg>
                 </div>
-            
+            </div>
+
+            <div class="dialog-item">
+                <label for="email" class="dialog-item__label">E-mail</label>
+                <div class="input">
+                    <input class="input__field" id="email" type="email" name="email" placeholder="name@email.com"
+                        required>
+                    <svg class="input__icon" width="31" height="31" viewBox="0 0 31 31">
+                        <use href="sprite.svg#icon-email"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="dialog-item">
+                <label for="textarea" class="dialog-item__label">Comment</label>
+                <div class="input">
+                    <textarea class="input__field input__field--high" id="textarea" placeholder="Some text..."
+                        name="comments"></textarea>
+                    <svg class="input__icon" width="31" height="31" viewBox="0 0 31 31">
+                        <use href="sprite.svg#icon-comments"></use>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="modal-buttons">
+                <button class="button" id="cancel" type="reset"
+                    onclick="window['some-dialog-id'].close()">Cancel</button>
+                <button class="button button--black" id="send" type="submit">Send</button>
+            </div>
+
         </form>
-      </dialog>
-<script src="script.js"></script>
+    </dialog>
+    <script src="script.js"></script>
 </body>
+
 </html>
