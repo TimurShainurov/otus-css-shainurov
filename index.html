@@ -7,6 +7,9 @@
     <script src="https://kit.fontawesome.com/86e565dd5d.js" crossorigin="anonymous"></script>
     <title>Mod Studio</title>
     <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="page">
@@ -32,15 +35,16 @@
                     <a class="menu__link menu__link--tablet" href="#strong-points">S</a>
                 </li>
                 <li>
-                    <button class="menu__link menu__link--message" type="button" onclick="window['some-dialog-id'].showModal();">
-                        <i class="fa-regular fa-comment-dots"></i>
+                    <button class="menu__link menu__link--message" type="button" href="#"
+                        onclick="window['some-dialog-id'].showModal();">
+                        <i class="fa-regular fa-message"></i>
                     </button>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="content">
         <div class="wrap">
             <div class="hero-block"></div>
             <div class="hero-box">
@@ -125,19 +129,19 @@
                 <div class="website__link">
                     <span class="website__text website__text--bold">Website</span>
                     <br>
-                    <a href="#">www.whitepapers.com</a>
+                    <a class="website__link-text" href="#">www.whitepapers.com</a>
                 </div>
 
                 <div class="website__link website__link--upper">
                     <span class="website__text website__text--bold">Creativity</span>
                     <br>
-                    <a href="#">www.whitepapers.com</a>
+                    <a class="website__link-text" href="#">www.whitepapers.com</a>
                 </div>
 
                 <div class="website__link website__link--upper">
                     <span class="website__text website__text--bold">Creativity</span>
                     <br>
-                    <a href="#">www.whitepapers.com</a>
+                    <a class="website__link-text" href="#">www.whitepapers.com</a>
                 </div>
             </div>
 
@@ -197,7 +201,7 @@
     </main>
     <footer class="footer">
         <address class="footer__contact-info">
-            <a href="tel:+79211234567">+7 921 123-45-67</a>
+            <a class="footer__link" href="tel:+79211234567">+7 921 123-45-67</a>
             <br>
             <a class="footer__link footer__link--uppercase" href="mailto:info@modstudio.com">info@modstudio.com</a>
         </address>
@@ -215,7 +219,7 @@
                 <label for="name" class="dialog-item__label">Name</label>
                 <div class="input">
                     <input class="input__field" id="name" type="text" name="name" placeholder="3+ Characters" required autofocus>
-                    <svg class="input__icon" width="31" height="31" viewBox="0 0 31 31">
+                    <svg class="input__icon input__icon--stroke" width="31" height="31" viewBox="0 0 31 31">
                         <use href="sprite.svg#icon-name"></use>
                     </svg>
                 </div>
@@ -243,7 +247,7 @@
             </div>
 
             <div class="modal-buttons">
-                <button class="button" id="cancel" type="reset"
+                <button class="button button--white" id="cancel" type="reset"
                     onclick="window['some-dialog-id'].close()">Cancel</button>
                 <button class="button button--black" id="send" type="submit">Send</button>
             </div>

@@ -48,6 +48,22 @@ a {
   color: inherit;
 }
 
+.hover-focus-link, .footer__link, .website__link-text, .menu__link {
+  outline: transparent;
+}
+.hover-focus-link:hover, .footer__link:hover, .website__link-text:hover, .menu__link:hover {
+  color: #A07C72;
+}
+.hover-focus-link:active, .footer__link:active, .website__link-text:active, .menu__link:active {
+  color: #E0B59F;
+}
+.hover-focus-link:focus, .footer__link:focus, .website__link-text:focus, .menu__link:focus {
+  outline: none;
+  color: #A07C72;
+  outline: 2px solid #E0B59F;
+  outline-offset: 10px;
+}
+
 body {
   font-family: "Roboto";
   font-size: 24px;
@@ -67,12 +83,17 @@ body {
   flex-wrap: wrap;
   padding: 16px 20px 16px 23px;
   gap: 20px;
+  position: fixed;
+  max-width: 1440px;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
 }
 .header__title {
   font-family: "Playfair Display";
   font-size: 86px;
   font-weight: 600;
-  line-height: normal;
+  line-height: 120%;
 }
 
 .menu {
@@ -95,6 +116,10 @@ body {
   cursor: pointer;
   background: none;
   font-size: 30px;
+}
+
+.content {
+  padding-top: 135px;
 }
 
 .wrap {
@@ -265,6 +290,9 @@ body {
   height: -moz-fit-content;
   height: fit-content;
 }
+.website__link-text:focus {
+  outline-offset: 2px;
+}
 .website__link--upper {
   position: relative;
   right: 8px;
@@ -384,6 +412,10 @@ body {
   line-height: 26px;
   width: 100%;
 }
+.footer__link:focus {
+  outline-offset: 4px;
+  text-decoration-color: #A07C72;
+}
 .footer__link--uppercase {
   text-transform: uppercase;
 }
@@ -440,6 +472,7 @@ body {
   padding: 20px 26px 26px 26px;
   font-size: 16px;
   font-weight: 400;
+  position: relative;
 }
 .dialog__subtitle {
   font-size: 22px;
@@ -459,17 +492,15 @@ body {
 .input {
   position: relative;
   display: flex;
-  border: 1px solid #B3B3B3;
-  border-radius: 8px;
 }
 .input__field {
   display: block;
   width: 100%;
+  border: 1px solid #B3B3B3;
+  border-radius: 8px;
   outline: none;
-  border: none;
   padding: 12px 50px 12px 10px;
   font-size: 16px;
-  border-radius: 8px;
 }
 .input__field--high {
   min-height: 95px;
@@ -479,11 +510,43 @@ body {
 .input__field--high::-webkit-scrollbar {
   display: none;
 }
+.input__field:hover {
+  background-color: #EDEDED;
+}
+.input__field:focus {
+  border-color: #E0B59F;
+}
+.input__field:focus::-moz-placeholder {
+  color: #A07C72;
+}
+.input__field:focus::placeholder {
+  color: #A07C72;
+}
+.input__field:focus + .input__icon {
+  fill: #A07C72;
+}
+.input__field:focus + .input__icon--stroke {
+  stroke: #A07C72;
+}
+.input__field:active {
+  border-color: #000000;
+  color: #000000;
+}
+.input__field:active + .input__icon {
+  fill: #000000;
+}
+.input__field:active + .input__icon--stroke {
+  stroke: #000000;
+}
 .input__icon {
   position: absolute;
   top: 6px;
   right: 10px;
   pointer-events: none;
+  fill: #868686;
+}
+.input__icon--stroke {
+  stroke: #868686;
 }
 
 .modal-buttons {
@@ -502,6 +565,25 @@ body {
   border-radius: 8px;
   padding: 11px 0;
   cursor: pointer;
+  outline: transparent;
+}
+.button--white:hover {
+  background-color: #F5E0D6;
+  border-color: #ECC5B2;
+}
+.button--white:active {
+  outline: none;
+  background-color: #EAC8B7;
+  border-color: #E0B59F;
+}
+.button--white:focus {
+  outline: 1px solid #E0B59F;
+  outline-offset: 2px;
+  color: #A07C72;
+}
+.button--white:disabled {
+  color: #CCCCCC;
+  border-color: #CCCCCC;
 }
 .button--black {
   background-color: black;
@@ -516,6 +598,19 @@ body {
   font-weight: 300;
   margin-right: 5px;
 }
+.button--black:hover {
+  background-color: #A07C72;
+}
+.button--black:active {
+  background-color: #E0B59F;
+}
+.button--black:focus {
+  outline: 1.5px solid #E0B59F;
+  outline-offset: 2px;
+}
+.button--black:disabled {
+  background-color: #CCCCCC;
+}
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .header {
@@ -527,6 +622,9 @@ body {
   .menu__list {
     justify-content: space-between;
     gap: 0;
+  }
+  .content {
+    padding-top: 186px;
   }
   .quote__text {
     font-size: 24px;
@@ -561,6 +659,9 @@ body {
     display: block;
     font-size: 40px;
     font-weight: 400;
+  }
+  .content {
+    padding-top: 76px;
   }
   .wrap {
     max-width: 768px;
