@@ -527,6 +527,7 @@ body {
         outline: none;
         padding: 12px 50px 12px 10px;
         font-size: 16px;
+        transition: all 0.2s ease-in-out;
 
         &--high {
             min-height: 95px;
@@ -603,6 +604,7 @@ body {
     padding: 11px 0;
     cursor: pointer;
     outline: transparent;
+    transition: all 0.2s ease-in-out;
     &--white {
         &:hover {
             background-color: #F5E0D6;
@@ -616,7 +618,7 @@ body {
         }
 
         &:focus {
-            outline: 1px solid #E0B59F;
+            outline: 1.5px solid #E0B59F;
             outline-offset: 2px;
             color: #A07C72;
         }   
@@ -829,7 +831,7 @@ body {
         padding-left: 16px;
     }
 
-    .subtitle__designers {
+    .subtitle--margin-left-119 {
         margin: 0 0 32px 0;
     }
 
@@ -875,7 +877,7 @@ body {
         display: none;
     }
 
-    .subtitle__testimonials {
+    .subtitle--span {
         order: 0;
     }
 
@@ -898,7 +900,7 @@ body {
         @extend .designers
     }
 
-    .subtitle__strengths {
+    .subtitle--margin-left-238 {
         margin: 0;
     }
 
@@ -921,7 +923,7 @@ body {
         margin: 0;
     }
 
-    .text-title__strengths {
+    .text-title--spacing {
         font-size: 46px;
         padding: 0;
         margin: 0 0 24px 0;

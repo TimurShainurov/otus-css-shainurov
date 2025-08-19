@@ -50,6 +50,7 @@ a {
 
 .hover-focus-link, .footer__link, .website__link-text, .menu__link {
   outline: transparent;
+  transition: color 0.2s ease-in-out, outline 0.3s ease-in-out;
 }
 .hover-focus-link:hover, .footer__link:hover, .website__link-text:hover, .menu__link:hover {
   color: #A07C72;
@@ -501,6 +502,7 @@ body {
   outline: none;
   padding: 12px 50px 12px 10px;
   font-size: 16px;
+  transition: all 0.2s ease-in-out;
 }
 .input__field--high {
   min-height: 95px;
@@ -566,6 +568,7 @@ body {
   padding: 11px 0;
   cursor: pointer;
   outline: transparent;
+  transition: all 0.2s ease-in-out;
 }
 .button--white:hover {
   background-color: #F5E0D6;
@@ -577,7 +580,7 @@ body {
   border-color: #E0B59F;
 }
 .button--white:focus {
-  outline: 1px solid #E0B59F;
+  outline: 1.5px solid #E0B59F;
   outline-offset: 2px;
   color: #A07C72;
 }
@@ -748,7 +751,7 @@ body {
     margin: 0 auto 80px;
     padding-left: 16px;
   }
-  .subtitle__designers {
+  .subtitle--margin-left-119 {
     margin: 0 0 32px 0;
   }
   .figure img {
@@ -786,7 +789,7 @@ body {
   .image-container__testimonials {
     display: none;
   }
-  .subtitle__testimonials {
+  .subtitle--span {
     order: 0;
   }
   .testimonials-main {
@@ -801,7 +804,7 @@ body {
   .picture {
     width: 46%;
   }
-  .subtitle__strengths {
+  .subtitle--margin-left-238 {
     margin: 0;
   }
   .strengths-container {
@@ -820,7 +823,7 @@ body {
     order: 0;
     margin: 0;
   }
-  .text-title__strengths {
+  .text-title--spacing {
     font-size: 46px;
     padding: 0;
     margin: 0 0 24px 0;
